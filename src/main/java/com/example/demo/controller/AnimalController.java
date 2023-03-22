@@ -16,6 +16,15 @@ import java.util.stream.Collectors;
  * and retrieval operations.
  */
 
+/* POST /api/animals
+{
+  "registrationNumber": "A003",
+  "date": "2023-03-23T00:00:00",
+  "weight": 115.8,
+  "origin": "Farm C"
+}
+ */
+
 @RestController
 @RequestMapping("/api/animals")
 public class AnimalController {
