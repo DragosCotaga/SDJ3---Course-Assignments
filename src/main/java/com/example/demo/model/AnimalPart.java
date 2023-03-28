@@ -27,6 +27,10 @@ public class AnimalPart {
     private double backWeight;
     private double legWeight;
 
+    private String animalType;
+
+    private int weight;
+
     public void setHeads(int heads, double weight) {
         this.heads = heads;
         this.headWeight = weight;

@@ -3,12 +3,10 @@ package com.example.demo.controller;
 import com.example.demo.model.AnimalPart;
 import com.example.demo.model.Tray;
 import com.example.demo.service.TrayService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * TrayController is a class that handles HTTP requests for CRUD operations
@@ -19,10 +17,17 @@ import java.util.Map;
  * of tray and animal part data.
  */
 
+@RestController
+@RequestMapping("/api/trays")
 public class TrayController {
-    private final Map<Long, Tray> trays = new HashMap<>();
 
-    private TrayService trayService;
+    private final TrayService trayService;
+
+
+    @Autowired
+    public TrayController(TrayService trayService) {
+        this.trayService = trayService;
+    }
 
     @PostMapping
     public Tray createTray(@RequestBody Tray tray) {

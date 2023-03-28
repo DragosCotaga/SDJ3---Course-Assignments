@@ -30,31 +30,31 @@ public class AnimalPartController {
 
     public static void setAnimalAttributes(String animalType, AnimalPart animalPart, double weight) {
         switch (animalType) {
-            case "Cow":
+            case "Cow" -> {
                 animalPart.setHeads(ONE_HEAD, weight * 0.1);
                 animalPart.setLegs(FOUR_LEGS, weight * 0.25);
                 animalPart.setChests(ONE_CHEST, weight * 0.4);
                 animalPart.setBacks(ONE_BACK, weight * 0.25);
-                break;
-            case "Pig":
+            }
+            case "Pig" -> {
                 animalPart.setHeads(ONE_HEAD, weight * 0.1);
                 animalPart.setLegs(FOUR_LEGS, weight * 0.24);
                 animalPart.setChests(ONE_CHEST, weight * 0.4);
                 animalPart.setBacks(ONE_BACK, weight * 0.26);
-                break;
-            case "Chicken":
+            }
+            case "Chicken" -> {
                 animalPart.setHeads(ONE_HEAD, weight * 0.1);
                 animalPart.setLegs(TWO_LEGS, weight * 0.1);
                 animalPart.setChests(ONE_CHEST, weight * 0.4);
                 animalPart.setBacks(ONE_BACK, weight * 0.4);
-                break;
-            default:
-                throw new IllegalArgumentException("Unsupported animal type: " + animalType);
+            }
+            default -> throw new IllegalArgumentException("Unsupported animal type: " + animalType);
         }
     }
 
     @PostMapping
     public AnimalPart createAnimalPart(@RequestBody AnimalPart animalPart) {
+        setAnimalAttributes(animalPart.getAnimalType(), animalPart, animalPart.getWeight());
         return animalPartService.addAnimalPart(animalPart);
     }
 
