@@ -9,3 +9,7 @@
 - List all animals registered in the system.
 - Filter animals by their registration date.
 - Filter animals by their origin (farm).
+
+## Branches
+
+- main-part-2: The main branch of the project which contains the second part of the assignment.
