@@ -26,17 +26,4 @@ public class Tray {
     public void addAnimalPart(AnimalPart animalPart) {
         animalParts.add(animalPart);
     }
-
-    public void removeAnimalPart(AnimalPart animalPart) {
-        animalParts.remove(animalPart);
-    }
-
-    public Double getCurrentWeight() {
-        return animalParts.stream()
-                .mapToDouble(animalPart -> animalPart.getHeads() * 1.0
-                        + animalPart.getChests() * 1.0
-                        + animalPart.getBacks() * 1.0
-                        + animalPart.getLegs() * 1.0)
-                .sum();
-    }
 }

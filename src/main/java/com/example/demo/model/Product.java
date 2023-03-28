@@ -14,9 +14,4 @@ public class Product {
     private Map<String, Integer> parts;
     private Double totalWeight;
 
-    public Product(Long id, Map<String, Integer> parts, Double totalWeight) {
-        this.id = id;
-        this.parts = parts;
-        this.totalWeight = totalWeight;
-    }
 }
