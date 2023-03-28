@@ -7,6 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * The AnimalPartController class is a RESTful web service endpoint that handles HTTP requests for managing animal parts.
+ * It maps to the "/api/animal-parts" path and includes methods for creating, retrieving, updating, and deleting AnimalPart objects.
+ *
+ * @see AnimalPart
+ * @see AnimalPartService
+ */
+
 @RestController
 @RequestMapping("/api/animal-parts")
 public class AnimalPartController {

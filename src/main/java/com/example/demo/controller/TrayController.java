@@ -10,6 +10,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * TrayController is a class that handles HTTP requests for CRUD operations
+ * on trays and manages the association between trays and animal parts.
+ * It exposes endpoints for creating, retrieving, updating, and deleting trays,
+ * as well as adding animal parts to a specific tray.
+ * This controller uses the TrayService to manage the business logic and persistence
+ * of tray and animal part data.
+ */
+
 public class TrayController {
     private final Map<Long, Tray> trays = new HashMap<>();
 

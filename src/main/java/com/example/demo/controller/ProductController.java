@@ -7,6 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * ProductController is a RESTful API controller that handles HTTP requests for CRUD operations
+ * on products. It exposes endpoints for creating, retrieving, updating, and deleting products.
+ * This controller utilizes the ProductService to manage the business logic and persistence
+ * of product data.
+ */
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {

@@ -10,6 +10,11 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * The AnimalController class handles HTTP requests related to animal resources, such as creating, retrieving, updating,
+ * and deleting animal records. It is a RESTful web service endpoint class that maps to the "/api/animals" path.
+ */
+
 @RestController
 @RequestMapping("/api/animals")
 public class AnimalController {
