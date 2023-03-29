@@ -9,3 +9,5 @@
 - List all animals registered in the system.
 - Filter animals by their registration date.
 - Filter animals by their origin (farm).
+
+https://github.com/DragosCotaga/SDJ3-Course-Assignments
